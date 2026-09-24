@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="David A. Veasley, Senior WordPress and Front-End Developer in Houston. 13 years, nearly 100 websites, and 110+ clients across healthcare, nonprofit, government, biotech, oil and gas, and e-commerce.">
+<meta property="og:title" content="David A. Veasley, Senior WordPress & Front-End Developer">
+<meta property="og:description" content="13 years of taking sites from staging to live. Case studies, results and a full client index.">
+<meta property="og:type" content="website">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>David Veasley Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F1F4F2;--surface:#FFFFFF;--ink:#14201C;--muted:#566660;--line:#D5DDD9;
+  --accent:#0C7A58;--accent-ink:#FFFFFF;--accent-soft:#DCEFE7;--amber:#B7791F;--amber-soft:#F6EBD5;
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;--ground:#0D1412;--surface:#141D1A;--ink:#E4ECE8;--muted:#93A59E;--line:#26332E;
+  --accent:#3DC495;--accent-ink:#06120D;--accent-soft:#16332A;--amber:#EDBE66;--amber-soft:#332812;}}
+:root[data-theme="dark"]{
+  color-scheme:dark;--ground:#0D1412;--surface:#141D1A;--ink:#E4ECE8;--muted:#93A59E;--line:#26332E;
+  --accent:#3DC495;--accent-ink:#06120D;--accent-soft:#16332A;--amber:#EDBE66;--amber-soft:#332812;}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(28px,4vw,40px);line-height:1.1;font-weight:700}
+h3{font-size:20px;line-height:1.25;font-weight:700}
+p{margin:0}
+.eyebrow{font:500 12px/1 var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.mono{font-family:var(--mono)}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--ground) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px;flex-wrap:wrap}
+.brand{font:700 17px/1 var(--display);color:var(--ink);text-decoration:none;display:flex;gap:10px;align-items:center}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+.top nav{display:flex;gap:18px;flex-wrap:wrap}
+.top nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500}
+.top nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{padding-block:clamp(40px,7vw,88px) clamp(32px,5vw,56px)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,64px);align-items:start}
+.hero h1{font-size:clamp(40px,6.6vw,80px);line-height:.98;font-weight:800;margin-block:18px 22px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.lede{font-size:clamp(17px,1.6vw,19px);color:var(--muted);max-width:56ch}
+.lede strong{color:var(--ink);font-weight:600}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:6px;font:600 15px/1 var(--body);text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--surface);cursor:pointer}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+.log{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.log-head{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);font:500 12px/1 var(--mono);color:var(--muted)}
+.log-head b{color:var(--accent);font-weight:500}
+.log ol{list-style:none;margin:0;padding:6px 0}
+.log li{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:9px 16px;font-size:14px;line-height:1.4}
+.log li+li{border-top:1px dashed var(--line)}
+.log time{font:400 12.5px/1.5 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.log .who{font-weight:600}
+.log .what{color:var(--muted)}
+.log .q{font-family:var(--mono);font-size:12.5px;color:var(--accent)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:clamp(36px,5vw,56px);border-block:1px solid var(--line)}
+.stat{padding:20px 16px 18px 0}
+.stat+.stat{padding-left:20px;border-left:1px solid var(--line)}
+.stat b{display:block;font:800 clamp(30px,4vw,44px)/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:8px;font-size:14px;color:var(--muted)}
+
+section{padding-block:clamp(48px,7vw,88px)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:32px}
+.sec-head p{max-width:52ch;color:var(--muted)}
+.sec-head .eyebrow{margin-bottom:10px;display:block}
+
+/* wins */
+.wins{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.win{background:var(--surface);padding:24px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.win .big{font:800 clamp(34px,4vw,46px)/1 var(--display);letter-spacing:-.03em;color:var(--accent);font-variant-numeric:tabular-nums}
+.win .big small{font-size:.5em;color:var(--muted);font-weight:700;letter-spacing:0}
+.win h3{font-size:17px}
+.win p{font-size:14.5px;color:var(--muted)}
+.win .tag{margin-top:auto;padding-top:8px;font:500 11.5px/1.3 var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+
+/* case studies */
+.cases{display:grid;gap:0;border-top:1px solid var(--line)}
+.case{display:grid;grid-template-columns:200px 1fr 260px;gap:clamp(16px,3vw,40px);padding-block:28px;border-bottom:1px solid var(--line)}
+.case .yr{font:500 13px/1.5 var(--mono);color:var(--muted)}
+.case .yr b{display:block;font:700 22px/1.2 var(--display);color:var(--ink);letter-spacing:-.01em;margin-bottom:4px}
+.case p{color:var(--muted);max-width:62ch}
+.case p+p{margin-top:10px}
+.case .out{color:var(--ink);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-content:start}
+.chip{font:500 12px/1 var(--mono);padding:6px 8px;border-radius:4px;background:var(--accent-soft);color:var(--ink)}
+.chip.a{background:var(--amber-soft)}
+
+/* quotes */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,3vw,32px)}
+blockquote{margin:0;padding-top:18px;border-top:3px solid var(--ink)}
+blockquote p{font:600 clamp(19px,2vw,23px)/1.3 var(--display);letter-spacing:-.01em}
+blockquote cite{display:block;margin-top:14px;font:normal 13px/1.4 var(--mono);color:var(--muted)}
+
+/* index */
+.tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+.tools input{flex:1 1 240px;min-width:0;padding:11px 14px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);font:400 15px var(--body)}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.filters button{font:500 13px/1 var(--body);padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.count{font:500 13px var(--mono);color:var(--muted)}
+.idx{border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:96px minmax(160px,1.1fr) 150px minmax(0,2fr);gap:16px;padding:12px 4px;border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.45}
+.row.h{font:500 11.5px/1 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding-block:12px}
+.row .y{font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.row .n{font-weight:600}
+.row .n small{display:block;font:400 12px/1.4 var(--mono);color:var(--muted)}
+.row .i{color:var(--muted);font-size:13.5px}
+.row .w{color:var(--muted)}
+.empty{padding:24px 4px;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.tl li{display:grid;grid-template-columns:150px 1fr;gap:24px;padding-block:18px;border-bottom:1px solid var(--line)}
+.tl .when{font:500 13px/1.6 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.tl h3{font-size:18px}
+.tl h3 span{font-family:var(--body);font-weight:400;color:var(--muted);font-size:15px}
+.tl p{color:var(--muted);margin-top:4px;max-width:70ch}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 40px}
+.skills h3{font-size:15px;font-family:var(--mono);font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px}
+.skills p{font-size:15.5px}
+
+/* next */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,3vw,32px)}
+.track{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:clamp(20px,3vw,32px)}
+.track ul{margin:14px 0 0;padding-left:18px;color:var(--muted)}
+.track li+li{margin-top:6px}
+.track li strong{color:var(--ink);font-weight:600}
+
+.contact{background:var(--ink);color:var(--ground);border-radius:12px;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.contact h2{color:var(--ground)}
+.contact p{color:color-mix(in srgb,var(--ground) 72%,var(--ink));margin-top:12px}
+.mail{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.mail code{font:500 clamp(16px,2vw,20px) var(--mono);user-select:all;padding:12px 14px;border:1px solid color-mix(in srgb,var(--ground) 30%,var(--ink));border-radius:6px}
+.mail a{color:inherit;text-decoration:none}
+.mail button{padding:12px 16px;border-radius:6px;border:0;background:var(--accent);color:var(--accent-ink);font:600 14px var(--body);cursor:pointer}
+footer{padding-block:32px 48px;color:var(--muted);font-size:13px}
+
+@media (max-width:900px){
+  .hero-grid,.contact,.next{grid-template-columns:1fr}
+  .wins,.quotes,.skills{grid-template-columns:1fr 1fr}
+  .case{grid-template-columns:1fr;gap:12px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){padding-left:0;border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:620px){
+  .wins,.quotes,.skills{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr;gap:2px}
+  .row.h{display:none}
+  .row .y{order:-1}
+  .tl li{grid-template-columns:1fr;gap:4px}
+  .top nav{gap:12px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .log li{animation:tick .5s both}
+  .log li:nth-child(2){animation-delay:.08s}.log li:nth-child(3){animation-delay:.16s}.log li:nth-child(4){animation-delay:.24s}.log li:nth-child(5){animation-delay:.32s}.log li:nth-child(6){animation-delay:.4s}
+  @keyframes tick{from{transform:translateY(4px)}to{transform:none}}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="dot" aria-hidden="true"></span>David A. Veasley</a>
+    <nav aria-label="Sections"><a href="resume/David-Veasley-Resume.pdf">Resume</a>
+      <a href="#wins">Wins</a><a href="#work">Case studies</a><a href="#index">All clients</a><a href="#path">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Senior WordPress &amp; Front-End Developer · Founder, BrandView · Houston</span>
+        <h1>Thirteen years of taking sites from <em>staging to live.</em></h1>
+        <p class="lede">Since 2013 I've built and run <strong>roughly 100 websites</strong> for <strong>110+ clients</strong>. Some I built white-label for agencies in San Francisco and Houston. Others were for Yahoo and Valtech, for oilfield manufacturers, for hospitals and nonprofits, and for founders launching their first store. I handle the build, the hosting, the SEO and the follow-up.</p>
+        <div class="cta">
+          <a class="btn primary" href="#work">See the work</a>
+          <a class="btn" href="resume/David-Veasley-Resume.pdf">Download resume (PDF)</a>
+        </div>
+      </div>
+      <div class="log" aria-label="Selected launch log">
+        <div class="log-head"><span>launch.log</span><b>● 2013 → now</b></div>
+        <ol>
+          <li><time>2015-10-19</time><div><span class="who">Diamond Technical Surveys</span> <span class="what">— new store takes its first order</span><div class="q">"we got our first sale!"</div></div></li>
+          <li><time>2016-05-24</time><div><span class="who">BasinTek</span> <span class="what">— site live; iOS/Android field app ships to sales &amp; rig crews</span></div></li>
+          <li><time>2017-12-13</time><div><span class="who">Working For Change</span> <span class="what">— 5 nonprofit sites launch at once</span><div class="q">"ITS ALIVE!!!"</div></div></li>
+          <li><time>2019-11-21</time><div><span class="who">SonALAsense</span> <span class="what">— overnight launch timed to a national press release</span></div></li>
+          <li><time>2021-05-21</time><div><span class="who">BioEnergetic Works</span> <span class="what">— local search visibility 13% → 76%</span></div></li>
+          <li><time>2026-08-12</time><div><span class="who">TGCI</span> <span class="what">— offline parts app with 8,093 part crossovers goes to TestFlight</span></div></li>
+        </ol>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>13</b><span>years shipping client work</span></div>
+      <div class="stat"><b>~100</b><span>websites built or managed</span></div>
+      <div class="stat"><b>110+</b><span>clients across 8 industries</span></div>
+      <div class="stat"><b>2,400+</b><span>BrandView invoices since 2018</span></div>
+    </div>
+  </div>
+
+  <section id="wins">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="eyebrow">Proof</span><h2>Results clients could see</h2></div><p>Every figure here comes from a real report, launch email or delivered build. None are estimates.</p></div>
+      <div class="wins">
+        <div class="win"><div class="big">13%→76%</div><h3>Local search visibility</h3><p>I rebuilt BioEnergetic Works' site and ran their local SEO. Within weeks, far more local searches were finding them.</p><div class="tag">BioEnergetic Works · 2021</div></div>
+        <div class="win"><div class="big">112K</div><h3>Social impressions for a nonprofit</h3><p>Houston Recovery Center's monthly social program reached 45K people and grew to 3.2K followers on Facebook, Instagram and LinkedIn.</p><div class="tag">Houston Recovery Center · 2023</div></div>
+        <div class="win"><div class="big">8,093 <small>parts</small></div><h3>An offline industrial parts app</h3><p>It maps DK-LOK part numbers to Swagelok, Parker and Enterprise equivalents and works with no signal. I cut the image payload from 700 MB to 100 MB.</p><div class="tag">TGCI · 2024–26</div></div>
+        <div class="win"><div class="big">1st <small>sale</small></div><h3>An e-commerce launch that sold</h3><p>I built a FLIR camera store with SEO, PPC and landing pages for an infrared inspection firm. It took its first online order at launch.</p><div class="tag">Diamond Technical Surveys · 2015</div></div>
+        <div class="win"><div class="big">5 <small>sites</small></div><h3>Launched on one day</h3><p>A Toronto nonprofit's main site went live together with four social-enterprise sites, all on a new host.</p><div class="tag">Working For Change · 2017</div></div>
+        <div class="win"><div class="big">57 <small>sites</small></div><h3>Hosted and maintained at once</h3><p>BrandView ran its own server for client sites, with updates, backups, security, DNS and email handled in-house.</p><div class="tag">BrandView · 2021</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="eyebrow">Case studies</span><h2>Selected builds</h2></div><p>Chosen to show range: government, biotech, oil &amp; gas, healthcare, e-commerce and custom apps.</p></div>
+      <div class="cases">
+        <article class="case">
+          <div class="yr"><b>BasinTek</b>2015–2017 · Oil &amp; gas<br>Contract via Aquent / Vitamin T</div>
+          <div><p>A drilling-motor manufacturer had engineering test data on how rubber performs under downhole heat and rotation. I turned that data into JavaScript formulas. The result was a WordPress product site and a hybrid iPhone/Android app where the sales team and rig operators can regenerate performance curves in real time and export PDF spec sheets in imperial or metric.</p><p class="out">In use by the sales team and rig operators. The site went live in May 2016.</p></div>
+          <div class="chips"><span class="chip">AngularJS</span><span class="chip">Ionic</span><span class="chip">Cordova</span><span class="chip">Chart.js</span><span class="chip">PDF generation</span><span class="chip">WordPress</span></div>
+        </article>
+        <article class="case">
+          <div class="yr"><b>Ready Houston &amp; Houston I Am Life</b>2017–2020 · City of Houston<br>White-label for Gilbreath Communications</div>
+          <div><p>These are two public sites for the City of Houston. For Ready Houston, the emergency-preparedness program, I built a custom WordPress/Divi theme with search and filtering over city data and an Office of Emergency Management (OEM) database. Houston I Am Life, a public-health campaign, got a custom theme built from supplied HTML/CSS.</p></div>
+          <div class="chips"><span class="chip">WordPress</span><span class="chip">Divi</span><span class="chip">Data filtering</span><span class="chip">WP Engine</span><span class="chip a">Government</span></div>
+        </article>
+        <article class="case">
+          <div class="yr"><b>Berkeley Lights, SonALAsense, Metagenomi</b>2017–2020 · Biotech<br>White-label for Argus (San Francisco)</div>
+          <div><p>I built corporate sites for Bay Area life-science companies from the agency's designs. Berkeley Lights got a full site with Lever careers API integration. SonALAsense launched overnight alongside its Ivy Brain Tumor Center partnership announcement. Argus also brought me annual-report microsites for BRIDGE Housing (four years) and Opportunity Fund.</p></div>
+          <div class="chips"><span class="chip">WordPress</span><span class="chip">Lever API</span><span class="chip">SVG</span><span class="chip">Pixel-perfect builds</span><span class="chip a">Biotech</span></div>
+        </article>
+        <article class="case">
+          <div class="yr"><b>Gulf Winds International</b>2020 · Logistics / port drayage<br>via Method 21</div>
+          <div><p>Built a custom WordPress theme from the design team's Photoshop files, with container tracking and verification calculators. Fuel-surcharge charts pull live data from the U.S. Energy Information Administration (EIA) API. The launch included a full 301 redirect map so existing search rankings carried over.</p></div>
+          <div class="chips"><span class="chip">WordPress</span><span class="chip">PHP</span><span class="chip">EIA API</span><span class="chip">jsRender</span><span class="chip">SEO migration</span></div>
+        </article>
+        <article class="case">
+          <div class="yr"><b>Mental Health Gateway</b>2018 · Mental health<br>White-label for Field of Study</div>
+          <div><p>Lead developer from concept to launch. I chose the framework and plugins and built every template. The site has events with paid registration, WooCommerce, support-group filters and a disorders library, and it's responsive throughout.</p></div>
+          <div class="chips"><span class="chip">WordPress</span><span class="chip">WooCommerce</span><span class="chip">Events</span><span class="chip">ACF</span></div>
+        </article>
+        <article class="case">
+          <div class="yr"><b>Houston Recovery Center</b>2020–present · Nonprofit healthcare<br>BrandView</div>
+          <div><p>HRC is BrandView's anchor client: website, hosting, SEO and monthly social media. I built the "Make A Plan" anti-drunk-driving microsite and PSA videos, marathon campaign videos, the community health worker program pages, impact reports, and the pages for the Meg Ryan–hosted <em>Empowered</em> documentary. The 2026 redesign started with an information-architecture proposal and a content inventory.</p><p class="out">Results: 112K impressions and 45K people reached. The <em>Empowered</em> page had 529 views during the documentary's national public TV rollout.</p></div>
+          <div class="chips"><span class="chip">Divi</span><span class="chip">Gravity Forms</span><span class="chip">SEO</span><span class="chip">Hootsuite</span><span class="chip">Video</span><span class="chip a">Retainer</span></div>
+        </article>
+        <article class="case">
+          <div class="yr"><b>Nap Bar / KOG Brands</b>2019–present · Wellness startup<br>BrandView</div>
+          <div><p>Brand, web and IT partner to the founder from before opening day. The work covers a WordPress/WooCommerce store, logo and print, product packaging, the investor pitch deck, analytics, a VR experience site, and in 2026 a custom block theme and keynote materials.</p><p class="out">Nap Bar was later featured in Forbes and opened a location at Bush Intercontinental Airport.</p></div>
+          <div class="chips"><span class="chip">WooCommerce</span><span class="chip">FSE block theme</span><span class="chip">Branding</span><span class="chip">Pitch deck</span><span class="chip">Packaging</span></div>
+        </article>
+        <article class="case">
+          <div class="yr"><b>TGCI Parts Lookup</b>2024–2026 · Industrial distribution<br>With Method 21</div>
+          <div><p>An offline iPad and mobile app for an industrial fittings distributor. It has search with autocomplete, browse tables with live filtering, product pages with images and PDFs, and a crossover database of 8,093+ parts. I also built a React "Gauge Configurator" block and a Next.js product dashboard.</p></div>
+          <div class="chips"><span class="chip">React Native</span><span class="chip">Expo</span><span class="chip">TypeScript</span><span class="chip">Firebase</span><span class="chip">Next.js</span></div>
+        </article>
+        <article class="case">
+          <div class="yr"><b>Print-on-demand platform</b>2025–2026 · E-commerce<br>Custom plugins</div>
+          <div><p>A custom Fabric.js product designer that exports 300-dpi print files, plus a fulfillment plugin integrated with Printful's v2 API. It sits on a custom WooCommerce child theme with scripted deploys and database sync.</p></div>
+          <div class="chips"><span class="chip">PHP</span><span class="chip">Fabric.js</span><span class="chip">REST API</span><span class="chip">Printful</span><span class="chip">WooCommerce</span></div>
+        </article>
+        <article class="case">
+          <div class="yr"><b>Yahoo</b>2021–2024 · Contract, Software Dev Engineer II<br>via Createch</div>
+          <div><p>Built accessible, high-performance HTML5 display ads with Node.js tooling for one of the web's largest ad platforms. During the same period I was a front-end developer at <strong>Valtech</strong> (2022–23), integrating CMS templates with back-end teams for enterprise clients.</p></div>
+          <div class="chips"><span class="chip">HTML5</span><span class="chip">Node.js</span><span class="chip">Accessibility</span><span class="chip">Performance</span><span class="chip a">Enterprise</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="eyebrow">In their words</span><h2>What clients say</h2></div></div>
+      <div class="quotes">
+        <blockquote><p>"All of the website and IT fun stuff is managed by David aka Speedy D because he's super fast with updates!"</p><cite>Founder, Nap Bar · 2020</cite></blockquote>
+        <blockquote><p>"Thanks for all your work on this site. It's looking great."</p><cite>Founder, Field of Study (agency) · 2019</cite></blockquote>
+        <blockquote><p>"What I have seen so far has been AMAZING!!!!"</p><cite>Client Program Manager, ProvenBrilliance · 2013</cite></blockquote>
+        <blockquote><p>"Thanks for all your support of our mission!"</p><cite>Director of Strategic Initiatives, Houston Recovery Center · 2026</cite></blockquote>
+        <blockquote><p>"Thanks again for all of the great work on the website."</p><cite>Pastor, Awakenings Inc. · 2022</cite></blockquote>
+        <blockquote><p>"Really like the updates… Appreciate all you are doing for me!"</p><cite>Author Lea Melville · 2026</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="index" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="eyebrow">The full record</span><h2>Every client, 2013–2026</h2></div><p>Compiled from 13 years of email and project files. Filter by industry or search by name or technology.</p></div>
+      <div class="tools"><input id="q" type="search" placeholder="Search clients, work or tools…" aria-label="Search clients"><span class="count" id="count"></span></div>
+      <div class="filters" id="filters" role="group" aria-label="Filter by industry"></div>
+      <div class="idx" role="table" aria-label="Client index">
+        <div class="row h" role="row"><span role="columnheader">Years</span><span role="columnheader">Client</span><span role="columnheader">Industry</span><span role="columnheader">What I did</span></div>
+        <div id="rows"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="path" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="eyebrow">Experience</span><h2>The path</h2></div></div>
+      <ol class="tl">
+        <li><div class="when">2018 – present</div><div><h3>Founder <span>· BrandView Inc., Houston</span></h3><p>A full-service web agency: managed websites, hosting on our own servers, SEO, social media, branding and print. Fifty-seven hosted client accounts at peak, a small team and offshore partners, and recurring retainers with nonprofits, clinics, retailers and founders.</p></div></li>
+        <li><div class="when">2014 – present</div><div><h3>Lead Front-End &amp; WordPress Developer <span>· Method 21</span></h3><p>Core developer for a Houston digital agency. I built white-label for Argus (SF), Field of Study, Gilbreath Communications, SO Creatives and John Manlove Marketing, plus Method 21's own oil &amp; gas, industrial and hospitality clients.</p></div></li>
+        <li><div class="when">2022 – 2023</div><div><h3>Front-end Developer <span>· Valtech</span></h3><p>Built HTML/CSS templates into enterprise CMS platforms, integrated with back-end teams and handled QA for a global digital agency.</p></div></li>
+        <li><div class="when">2021 – 2024</div><div><h3>Software Dev Engineer II (contract) <span>· Yahoo, via Createch</span></h3><p>Built accessible, high-performance HTML5 banner ads with Node.js build tooling.</p></div></li>
+        <li><div class="when">2015 – 2017</div><div><h3>Contract Developer <span>· BasinTek, via Aquent / Vitamin T</span></h3><p>Built the product website and a hybrid field app for an oilfield equipment maker.</p></div></li>
+        <li><div class="when">2013 – 2014</div><div><h3>Freelance Web Designer <span>· 3 Heart Blvd</span></h3><p>Websites, email campaigns and print for a PR agency, a youth nonprofit and a chamber of commerce.</p></div></li>
+        <li><div class="when">Education &amp; service</div><div><h3>B.S. Economics <span>· University of Houston, 2010</span></h3><p>U.S. Army Reserve veteran (2004–2010) · Technology Lead, Black Girls CODE Houston (2021–2025) · Cybersecurity Workforce Certification Training (CWCT, 2026, in progress) · Ran the Chevron Houston Marathon for HRC's Run for Addiction Recovery.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="skills" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="eyebrow">Toolkit</span><h2>Skills, as used on real projects</h2></div></div>
+      <div class="skills">
+        <div><h3>WordPress &amp; CMS</h3><p>Custom themes and FSE block themes, Divi / Divi 5, Elementor, Beaver Builder migrations, ACF, custom post types, custom plugins and mu-plugins, WooCommerce, Gravity/Ninja/Fluent Forms, MODX, Statamic, Sitecore exposure</p></div>
+        <div><h3>Front-end &amp; apps</h3><p>HTML5, CSS/Sass, JavaScript, TypeScript, React, React Native/Expo, Next.js, AngularJS, Ionic/Cordova, Chart.js, Fabric.js, Tailwind, accessibility and performance</p></div>
+        <div><h3>E-commerce &amp; integrations</h3><p>WooCommerce, Shopify, Square sync, Stripe webhooks, Printful, Bookly, FareHarbor, MindBody, Lever, Calendly + Zapier, EIA and REST APIs</p></div>
+        <div><h3>Hosting &amp; DevOps</h3><p>cPanel/WHM, RunCloud, VPS/nginx, DigitalOcean, WP Engine, Docker, wp-env, Git, rsync deploys, site migrations, DNS/email, security hardening</p></div>
+        <div><h3>Marketing &amp; analytics</h3><p>Local and technical SEO, Semrush, GA4, Search Console, Clarity, Hotjar, PPC, Facebook lead gen, email (Mailchimp, Constant Contact), social programs and reporting</p></div>
+        <div><h3>Design &amp; content</h3><p>Logos and brand kits, print and packaging prepress, pitch decks, InDesign book layout, video, photography, Matterport capture, and AI-assisted automation (n8n, Whisper, Claude)</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="eyebrow">What's next</span><h2>Where I'm most useful</h2></div></div>
+      <div class="next">
+        <div class="track"><span class="eyebrow">Full-time</span><h3 style="margin-top:8px">Senior WordPress / Front-End Developer · Web Manager</h3><ul>
+          <li><strong>Agencies</strong> that need someone who can build from a designer's comps and ship on deadline (Argus, Valtech, Field of Study)</li>
+          <li><strong>In-house web teams</strong> at hospitals, nonprofits and public agencies (HRC, City of Houston, Mental Health Gateway)</li>
+          <li><strong>Industrial and energy companies</strong> that need product catalogs, calculators and field apps</li></ul></div>
+        <div class="track"><span class="eyebrow">Freelance / BrandView</span><h3 style="margin-top:8px">Build it, host it, grow it</h3><ul>
+          <li><strong>Oil &amp; gas and industrial websites</strong>: spec sheets, part crossovers, locations, configurators</li>
+          <li><strong>Nonprofit and healthcare care plans</strong>: website, SEO, social media and campaigns under one retainer</li>
+          <li><strong>White-label development</strong> for design and PR agencies</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="contact">
+        <div><h2>Have a site that needs to go live?</h2><p>I'm open to full-time roles, contracts and new BrandView clients. I'm based in Houston and work remotely.</p></div>
+        <div class="mail"><a id="email" href="mailto:david.a.veasley@gmail.com"><code>david.a.veasley@gmail.com</code></a><button type="button" id="copy">Copy email</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">David A. Veasley · BrandView Inc. · Houston, TX</div></footer>
+
+<script>
+const C=[
+["2013–2015","ProvenBrilliance Productions","Professional services","WordPress site, online-presence strategy, email marketing"],
+["2013–2015","Pain Is Power","Nonprofit & civic","Website, monthly email campaigns, flyers, posters, event programs"],
+["2014","Houston Intercontinental Chamber of Commerce","Nonprofit & civic","Constant Contact campaigns, event registration, redesign proposal"],
+["2014–2016","Diamond Technical Surveys","Oil, gas & industrial","Site, FLIR e-commerce store, SEO, PPC, Unbounce landing pages","Method 21"],
+["2014–2018","CorDEX · Thermo-Probes · PIN directory","Oil, gas & industrial","Landing pages; tiered-listing inspector directory with forum","Method 21"],
+["2014–2017","Gulf Coast journal, University of Houston","Nonprofit & civic","MODX site maintenance, upgrade planning, IA review","Method 21"],
+["2014","Askco","Professional services","Logo, Google Analytics"],
+["2014–2015","Wooyah","E-commerce & retail","MODX e-commerce build","Method 21"],
+["2015–2019","Skyline Art Services","Professional services","Website build and updates","Method 21"],
+["2015–2019","Masterword Services","Professional services","Translation-company site, importer, team pages","Method 21"],
+["2015–2016","Texas de Brazil","Food & hospitality","Multi-location local SEO program","Method 21"],
+["2015–2019","Advanced Home","Professional services","Site build (2016) and rebuild (2019)","Method 21"],
+["2015–2017","BasinTek","Oil, gas & industrial","WordPress product site plus hybrid iOS/Android performance app","Aquent / Vitamin T"],
+["2016","Texas Fuel Independence","Nonprofit & civic","Advocacy website","Method 21"],
+["2016–2017","Opportunity Fund","Nonprofit & civic","Interactive annual-report microsites, 2 years","Argus"],
+["2016–2019","BRIDGE Housing","Nonprofit & civic","Annual-report sites for 4 years; improved site search","Argus"],
+["2016–2024","Working For Change (Toronto)","Nonprofit & civic","Host migration, redesign, 4 social-enterprise sites, hosting"],
+["2016–2025","Nature's Best","Professional services","WordPress build and 8 years of maintenance","Method 21"],
+["2017","Berkeley Lights","Biotech","Corporate site build, Lever careers API","Argus"],
+["2017–2021","Premier Gastroenterology of Katy","Health, wellness & care","WordPress site in 4 phases, patient portal","Gilbreath Communications"],
+["2017–2018","Ready Houston (City of Houston)","Nonprofit & civic","Custom theme, city data search, OEM database","Gilbreath Communications"],
+["2017–2018","Desert Silicon","Oil, gas & industrial","Manufacturer site, product data sheets","Argus"],
+["2017–2020","Axiom Medical","Health, wellness & care","MODX + WordPress, reusable components, blog","Method 21"],
+["2017–2020","GTC Technology","Oil, gas & industrial","Petrochemical licensor redesign from agency comps","SO Creatives"],
+["2018","RD Airways","Oil, gas & industrial","Site build and launch","John Manlove Marketing"],
+["2018","First Continental Properties","Professional services","Real-estate site","John Manlove Marketing"],
+["2018–2026","Bestway Oilfield","Oil, gas & industrial","Site build; 2026 redesign","John Manlove Marketing"],
+["2019","J. Morales","Professional services","Site with careers and job postings","John Manlove Marketing"],
+["2018–2020","ArthurTrafford.com","Creators & speakers","Hosting and maintenance retainer, 29 months"],
+["2018–2020","RE Cleaning Services","Professional services","Lead-generation site with quote forms"],
+["2018","Mental Health Gateway","Health, wellness & care","Concept-to-launch build: events, paid registration, WooCommerce","Field of Study"],
+["2018–2020","Sand Hill Foundation","Nonprofit & civic","Site refresh","Argus"],
+["2018–2020","Skybound","Professional services","Revisions and updates","Method 21"],
+["2018–2020","Breathe Moore Training","Health, wellness & care","WordPress + MindBody booking","Field of Study"],
+["2019","Local Group brewery","Food & hospitality","Brewery site launch","Field of Study"],
+["2019","Spindletop Charities","Nonprofit & civic","Site updates","Field of Study"],
+["2019–2020","Houston I Am Life (City of Houston)","Nonprofit & civic","Custom WordPress theme for a public-health campaign","Gilbreath Communications"],
+["2018–2021","ProFresh Cabinets + franchisees","Professional services","Main and franchise sites, booking widget, Google Business Profile","Method 21"],
+["2019","SonALAsense","Biotech","New site, overnight launch with a press release","Argus"],
+["2018–2019","Abaco Drilling","Oil, gas & industrial","Portfolio site","Method 21"],
+["2019","Nice Cans · Conroe Power Washing · Gateway Group","Professional services","Small-business sites"],
+["2020","Sunflower Hill","Nonprofit & civic","WordPress build, wireframes","Argus"],
+["2020","Gulf Winds International","Oil, gas & industrial","Custom theme, container calculators, EIA fuel-surcharge charts","Method 21"],
+["2020","Flightpath · Metagenomi","Biotech","Site with PDF feature; staging build","Argus"],
+["2019–2026","Historic Galveston Ghost Tours","Food & hospitality","Google Business Profile, FareHarbor, social media; 2026 page rebuild with QA","Method 21"],
+["2019–2026","Nap Bar / KOG Brands","Health, wellness & care","Store, brand, packaging, pitch deck, VR site, keynote theme"],
+["2019–2020","NAMI Greater Houston","Health, wellness & care","Website audit, logo, social media, newsletters"],
+["2019–2024","EZ Living MD","Health, wellness & care","Site, logo, Calendly + Zapier booking, hosting"],
+["2020","RSP Group / Iron Mule Fittings","Oil, gas & industrial","Logo and trademark, sell sheet, e-commerce scope"],
+["2020–2026","Houston Recovery Center","Health, wellness & care","Web, SEO, social, microsites, video, impact reports, redesign"],
+["2020–2026","JENuine Nutrition","Health, wellness & care","Divi site, WooCommerce + Printful merch store"],
+["2020–2026","Crumbville TX Bakery","Food & hospitality","Logo, site, Square Online store, labels, growth strategy"],
+["2020–2021","On the Go GLAM","Health, wellness & care","Migration, Bookly + Stripe booking platform"],
+["2020–2021","Nuksy's Table","Food & hospitality","Custom packaging artwork and prepress"],
+["2020–2022","Tha Hoop Spot","Professional services","Logo, website, flyers"],
+["2021–2025","Kayos","E-commerce & retail","WooCommerce fashion store, Stripe"],
+["2021–2026","BioEnergetic Works","Health, wellness & care","Site rebuild, local SEO (13%→76%), print"],
+["2021–2024","We The List / The List Radio","E-commerce & retail","WooCommerce ↔ Square sync, redesign, live-drop page"],
+["2021–2026","Caare Health","Health, wellness & care","Elementor build, chronic-care pages, maintenance"],
+["2021–2023","Out of This World Cafe","Food & hospitality","WordPress build, menus"],
+["2021","Haute de Lux Candle Co.","E-commerce & retail","Product import and copy"],
+["2021–2022","Hometown Roofing · Richardson Roofing · tree services","Professional services","Facebook lead gen, call tracking"],
+["2021–2022","Tulson Pharmacy","Health, wellness & care","Managed site, review funnels"],
+["2021–2024","Body Shapers · Platypus Media · Steed Web · Womb To Wound · others","Professional services","Managed-site plans and builds"],
+["2022–2024","Awakenings Inc.","Nonprofit & civic","Rebrand, new domain, giving page (volunteer)"],
+["2022","Eclectic Vibez","E-commerce & retail","WooCommerce digital downloads and memberships"],
+["2023–2024","Push Wellness","Health, wellness & care","New site build"],
+["2024–2026","TGCI","Oil, gas & industrial","Offline parts-crossover app, gauge configurator, dashboard","Method 21"],
+["2018–2026","Journalin' on Jetlag","Creators & speakers","Hosting, custom mu-plugins, photo-import automation"],
+["2024–2026","Stand On My Square","Creators & speakers","Author/speaker site, popup-video plugin"],
+["2024–2026","Alamo City Engineering Services","Oil, gas & industrial","Rebrand; Beaver Builder → Divi migration"],
+["2024–2026","Lea Melville","Creators & speakers","Book layout, custom maps, photography, site"],
+["2025–2026","JC Interiors","Professional services","Divi build"],
+["2025–2026","Master Tool Repair","Oil, gas & industrial","SEO: pillar pages, content clusters, rewrites","Method 21"],
+["2025–2026","M&J Manufacturing / Robust Meds","E-commerce & retail","Sites, Stripe, catalog scrapers → WooCommerce"],
+["2025–2026","Sisters of the Yam","Nonprofit & civic","Events, ticketing, GiveWP donations"],
+["2025","Myers International · RP Irrigation","Professional services","Web and marketing consulting"],
+["2026","East End Tire Shop","Professional services","Custom block theme and social media"],
+["2026","TSC Drill Pipe","Oil, gas & industrial","Divi 5 rebuild, locations plugin, launch","Method 21"],
+["2026","K&B Industries","Oil, gas & industrial","Theme and mobile fixes","Method 21"],
+["2025–2026","Raul Espino","Creators & speakers","React-powered custom theme, VPS deploy"],
+["2025–2026","Print-on-demand store","E-commerce & retail","Fabric.js designer, Printful fulfillment plugins"],
+["2026","KOG Performance Rehab","Creators & speakers","Custom FSE block theme, ~20 keynote pages"],
+["2026","Colby Holiday","Creators & speakers","Theme and content"],
+["2026","My Organic Skin","E-commerce & retail","Logo redesign, sign print files"],
+["2026","Israel: His People, His Place","Creators & speakers","104-slide author presentation"]
+];
+const rowsEl=document.getElementById('rows'),q=document.getElementById('q'),countEl=document.getElementById('count'),fEl=document.getElementById('filters');
+const start=s=>parseInt(s,10);
+C.sort((a,b)=>start(a[0])-start(b[0])||a[1].localeCompare(b[1]));
+const inds=["All",...[...new Set(C.map(c=>c[2]))].sort()];
+let active="All";
+try{const s=localStorage.getItem('dv-filter');if(s&&inds.includes(s))active=s}catch(e){}
+const esc=s=>s.replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+function drawFilters(){fEl.innerHTML=inds.map(i=>{const n=i==="All"?C.length:C.filter(c=>c[2]===i).length;return `<button type="button" data-i="${esc(i)}" aria-pressed="${i===active}">${esc(i)} <span class="mono">${n}</span></button>`}).join('')}
+function draw(){
+  const t=q.value.trim().toLowerCase();
+  const list=C.filter(c=>(active==="All"||c[2]===active)&&(!t||c.join(' ').toLowerCase().includes(t)));
+  rowsEl.innerHTML=list.length?list.map(c=>`<div class="row" role="row"><span class="y" role="cell">${esc(c[0])}</span><span class="n" role="cell">${esc(c[1])}${c[4]?`<small>via ${esc(c[4])}</small>`:''}</span><span class="i" role="cell">${esc(c[2])}</span><span class="w" role="cell">${esc(c[3])}</span></div>`).join(''):'<div class="empty">No clients match. Try a broader search, or choose All.</div>';
+  countEl.textContent=`${list.length} of ${C.length} entries`;
+}
+fEl.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;active=b.dataset.i;try{localStorage.setItem('dv-filter',active)}catch(e){}drawFilters();draw()});
+q.addEventListener('input',draw);
+drawFilters();draw();
+document.getElementById('copy').addEventListener('click',e=>{
+  const b=e.currentTarget,done=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy email',1600)};
+  const sel=()=>{const r=document.createRange();r.selectNodeContents(document.getElementById('email'));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected. Press ⌘C'};
+  try{navigator.clipboard.writeText('david.a.veasley@gmail.com').then(done,sel)}catch(err){sel()}
+});
+</script>
+
+</body>
+</html>
